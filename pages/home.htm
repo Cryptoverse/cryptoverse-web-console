@@ -1,0 +1,14 @@
+<navbar></navbar>
+
+<h1>Server Stats</h1>
+
+<div ng-show="loading">
+    <button type="button" class="btn btn-warning">Loading</button><br>
+</div>
+<div ng-hide="loading">
+    <button type="button" class="btn btn-success" ng-click="init();">Refresh</button><br>
+    Difficulty Duration: {{blockChainInfo.difficulty_duration}}<br>
+    Difficulty Interval: {{blockChainInfo.difficulty_interval}}<br>
+    Total Difficulty: {{blockChainInfo.difficulty_interval*blockChainInfo.difficulty_duration}}<br>
+    Fudge: {{blockChainInfo.fudge}}
+</div>

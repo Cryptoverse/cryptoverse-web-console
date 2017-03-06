@@ -1,0 +1,25 @@
+<navbar></navbar>
+<p>
+<div ng-show="starting">
+    <button type="button" class="btn btn-warning">Starting...</button><br>
+</div>
+<div ng-show="processing && !starting">
+    <button type="button" class="btn btn-info">Processing...</button><br>
+</div>
+<div ng-show="!starting && !processing">
+    <button type="button" class="btn" ng-click="startProbing();">Probe</button><br>
+</div>
+<div ng-show="performanceData.tries">
+    <ul>
+        <li>Tries: {{performanceData.tries}}</li>
+        <li>ElapsedTime: {{performanceData.elapsed_minutes}}</li>
+        <li>H/s : {{performanceData.hashes_per_second}}</li>
+    </ul>
+</div>
+<div ng-show="finalData">
+    <ul>
+        <li>Hash: {{finalData.hash}}</li>
+        <li>Nonce: {{finalData.nonce}}</li>
+        <li>Difficulty: {{finalData.difficulty}}</li>
+    </ul>
+</div>
