@@ -1,0 +1,24 @@
+{
+  "name": "cryptoverse-web-console",
+  "homepage": "https://github.com/Cryptoverse/cryptoverse-web-console",
+  "authors": [
+    "Ian Earle <ian.s.m.earle@gmail.com>"
+  ],
+  "description": "Web interface for cryptoverse service",
+  "main": "index.htm",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "angular-route": "^1.6.2"
+  }
+}
