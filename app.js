@@ -2,6 +2,7 @@ domain = "http://localhost:8000/"
 cv_service = "http://localhost:5000/"
 
 angular.module('app', ['ngRoute'])
+
 .config(function($routeProvider){
   $routeProvider
   .when('/', {
@@ -13,9 +14,11 @@ angular.module('app', ['ngRoute'])
     controller  : 'ProbeController'
   })
 })
+
 .controller('DashboardController', function($scope,$http){
   $scope.loading = true;
   $scope.blockChainInfo = {};
+
   $scope.init = function(){
     $scope.loading = true;
     $http.get(cv_service+"debug/blockchain-info").then(
@@ -29,9 +32,10 @@ angular.module('app', ['ngRoute'])
     )
   }
 
-
   $scope.init();
+
 })
+
 .controller('ProbeController', function($scope, $http, $timeout){
   $scope.jobData = {}
   $scope.starting = false;
@@ -84,6 +88,7 @@ angular.module('app', ['ngRoute'])
       }
     )
   }
+
   $scope.refreshProbing = function(){
     $http.get(cv_service+"jobprogress?job="+$scope.jobData.task_id).then(
       function(resp){
@@ -97,7 +102,7 @@ angular.module('app', ['ngRoute'])
           $scope.processing = false;
           $scope.finalData = resp.data[1];
         }
-      }, function(error){
+      },function(error){
 
       }
     )
@@ -105,6 +110,7 @@ angular.module('app', ['ngRoute'])
   
 
 })
+
 .directive('navbar', function() {
   return {
     restrict: 'E',

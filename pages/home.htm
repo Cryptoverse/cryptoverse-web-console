@@ -7,8 +7,10 @@
 </div>
 <div ng-hide="loading">
     <button type="button" class="btn btn-success" ng-click="init();">Refresh</button><br>
-    Difficulty Duration: {{blockChainInfo.difficulty_duration}}<br>
-    Difficulty Interval: {{blockChainInfo.difficulty_interval}}<br>
-    Total Difficulty: {{blockChainInfo.difficulty_interval*blockChainInfo.difficulty_duration}}<br>
-    Fudge: {{blockChainInfo.fudge}}
+    <ul>
+        <li>Difficulty Duration: {{blockChainInfo.difficulty_duration}}</li>
+        <li>Difficulty Interval: {{blockChainInfo.difficulty_interval}}</li>
+        <li>Total Difficulty: {{blockChainInfo.difficulty_interval*blockChainInfo.difficulty_duration}}</li>
+        <li>Fudge: {{blockChainInfo.fudge}}</li>
+    </ul>
 </div>
